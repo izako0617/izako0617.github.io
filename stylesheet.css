@@ -78,13 +78,15 @@ a {
 header {
   height: 65px;
   width: 100%;
-  background-color: rgba(34,49,52,0.9);
+  background-color: rgba(87, 55, 18, 0.644);
   position :fixed;
   top: 0;
   z-index: 10;
 }
 
-.logo {
+.header-logo {
+  color : white;
+  font-size: 30px;
   width: 124px;
   margin-top: 20px;
 }
