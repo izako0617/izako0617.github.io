@@ -17,7 +17,8 @@ a {
   margin: 0 auto;
 }
 
-.top-wrapper {
+/* ------------------------------------------------------------------------------ main --  */
+.main {
   padding: 180px 0 100px 0;
   background-image: url(top.png);
   background-size: cover;
@@ -58,6 +59,18 @@ a {
   background-color: #55acee;
 }
 
+.instagram {
+  background-color: #e1306c;
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.line {
+  background-color: #00c300;
+}
+
 .btn {
   padding: 8px 24px;
   color: white;
@@ -75,6 +88,7 @@ a {
   margin-right: 5px;
 }
 
+/* ------------------------------------------------------------------------------ header --  */
 header {
   height: 65px;
   width: 100%;
@@ -113,6 +127,7 @@ header {
   background-color: rgba(255,255,255,0.3);
 }
 
+/* ------------------------------------------------------------------------------ lesson --  */
 .lesson-wrapper {
   height: 580px;
   padding-bottom: 80px;
@@ -179,6 +194,7 @@ header {
   box-shadow: none;
 }
 
+/* ------------------------------------------------------------------------------ footer --  */
 footer img {
   width: 125px;
 }
@@ -205,6 +221,7 @@ footer {
   clear: left;
 }
 
+/* ------------------------------------------------------------------------------ レスポンシブデザイン --  */
 @media all and (max-width: 1000px) {
   .lesson {
     width: 50%;
