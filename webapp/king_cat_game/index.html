@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>玉様ゲーム 【いもねこアプリ】</title>
+	<!-- twitterカード シェア -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://pbs.twimg.com/media/FN93ludaUAYYLbS?format=jpg">
+  <!-- reset min css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header id="header" class="container">
+    <h1>
+      <span class="ja">玉様ゲーム</span><br>
+      <span class="en">- TAMAsama Game -</span>
+    </h1>
+    <p>玉様の命令は絶対にゃ！<br>下僕どもよ、必ず実行するのにゃ！</p>
+  </header>
+
+  <main class="container">
+
+    <div class="setting">
+      <!-- ■ 設定(1): 誰が？ ■ -->
+      <section id="who" class="setting-items">
+        <h2>プレイヤー</h2>
+        <p>プレイヤーの登録をするのにゃ！(最大5匹まで)</p>
+        <ul class="who-list">
+          <li><input type="text" maxlength="10" value="シロ"></li>
+          <li><input type="text" maxlength="10" value="茶トラ"></li>
+          <li><input type="text" maxlength="10" value="ミケ"></li>
+          <li><input type="text" maxlength="10" value="クロ"></li>
+          <li><input type="text" maxlength="10" value="ソックス"></li>
+        </ul>
+      </section>
+
+      <!-- ■ 設定(2): いつ？ ■ -->
+      <section id="when" class="setting-items">
+        <h2>いつ？</h2>
+        <p>最大5件まで設定できるにゃ</p>
+        <ul class="when-list">
+          <li><input type="text" maxlength="10" value="ご飯中"></li>
+          <li><input type="text" maxlength="10" value="真夜中"></li>
+          <li><input type="text" maxlength="10" value="お昼寝中"></li>
+          <li><input type="text" maxlength="10" value="散歩中"></li>
+          <li><input type="text" maxlength="10" value="チュール中"></li>
+        </ul>
+      </section>
+
+      <!-- ■ 設定(3): 何を？ ■ -->
+      <section id="what" class="setting-items">
+        <h2>何を？</h2>
+        <p>最大5件まで設定できるにゃ</p>
+        <ul class="what-list">
+          <li><input type="text" maxlength="10" value="耳"></li>
+          <li><input type="text" maxlength="10" value="しっぽ"></li>
+          <li><input type="text" maxlength="10" value="鼻"></li>
+          <li><input type="text" maxlength="10" value="ほほ"></li>
+          <li><input type="text" maxlength="10" value="肉球"></li>
+        </ul>
+      </section>
+
+      <!-- ■ 設定(4): どこで？ ■ -->
+      <section id="where" class="setting-items">
+        <h2>どこで？</h2>
+        <p>最大5件まで設定できるにゃ</p>
+        <ul class="where-list">
+          <li><input type="text" maxlength="10" value="ベッドの上"></li>
+          <li><input type="text" maxlength="10" value="こたつの中"></li>
+          <li><input type="text" maxlength="10" value="ルンバの上"></li>
+          <li><input type="text" maxlength="10" value="キャットタワーの前"></li>
+          <li><input type="text" maxlength="10" value="ひざの上"></li>
+        </ul>
+      </section>
+
+      <!-- ■ 設定(5): どんなふうに？ ■ -->
+      <section id="how" class="setting-items">
+        <h2>どんなふうに？</h2>
+        <p>最大5件まで設定できるにゃ</p>
+        <ul class="how-list">
+          <li><input type="text" maxlength="10" value="優しく"></li>
+          <li><input type="text" maxlength="10" value="激しく"></li>
+          <li><input type="text" maxlength="10" value="元気いっぱい"></li>
+          <li><input type="text" maxlength="10" value="かわいく"></li>
+          <li><input type="text" maxlength="10" value="挑発的に"></li>
+        </ul>
+      </section>
+
+      <!-- ■ 設定(6): 何する？ ■ -->
+      <section id="play" class="setting-items">
+        <h2>何する？</h2>
+        <p>最大5件まで設定できるにゃ</p>
+        <ul class="play-list">
+          <li><input type="text" maxlength="10" value="ねこパンチする"></li>
+          <li><input type="text" maxlength="10" value="ねこじゃらしする"></li>
+          <li><input type="text" maxlength="10" value="口にくわえる"></li>
+          <li><input type="text" maxlength="10" value="ねこばばする"></li>
+          <li><input type="text" maxlength="10" value="招きねこポーズする"></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ■ マスク ■ -->
+    <div id="mask" class="hide"></div>
+
+    <!-- ■ 命令 ■ -->
+    <section id="command" class="hide">
+      <h2>玉様からの命令にゃ！</h2>
+      <div id="text">
+        【誰】が【誰】の【何】を【いつ】【どこ】で【どんなふうに】【何する】のにゃ！
+      </div>
+      <p>必ず実行するのにゃ！ ツイートで宣言するかにゃ？</p>
+      <p class="sns">
+        <!-- twitter シェアボタン -->
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
+        data-text="【玉様ゲーム - TAMAsama Game - 】玉様からの命令は絶対です！【いもねこアプリ】" 
+        data-url="" 
+        data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+        data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- data-via="izako02915498" -->
+      </p>
+      <p class="ad">
+        ----- ad -----<br><br>
+        玉様ゲームで遊べるのは いもねこアプリだけ！
+      </p>
+      <button id="btn_close">閉じる</button>
+    </section>
+
+    <!-- ■ 実行ボタン ■ -->
+    <section id="order">
+      <button id="btn_open">玉様の命令</button>
+      <div class="set">
+        <p>設定を変更するかにゃ？</p>
+        <a href="#who">誰？</a>
+        <a href="#when">いつ？</a>
+        <a href="#what">何を？</a>
+        <a href="#where">どこで？</a>
+        <a href="#how">どんなふうに？</a>
+        <a href="#play">何する？</a>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="container">
+    <!-- ■ sns ■ -->
+    <section id="sns">
+      <div class="sns">
+        <!-- twitter シェアボタン -->
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
+        data-text="【玉様ゲーム - TAMAsama Game - 】玉様からの命令は絶対です！【いもねこアプリ】" 
+        data-url="" 
+        data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+        data-via="izako02915498" 
+        data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <p class="ad">
+        ----- ad -----<br><br>
+        玉様ゲームで遊べるのは いもねこアプリだけ！
+      </p>
+    </section>
+
+    <p><a href="../index.html">いもねこアプリ</a></p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
