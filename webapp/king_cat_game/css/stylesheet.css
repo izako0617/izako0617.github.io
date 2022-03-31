@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body {
+  color: #333;
+  background-color: goldenrod;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+a {
+  color: #333;
+}
+
+/* -------------------------------------------- header -- */
+#header h1 {
+  padding: 24px;
+  text-align: center;
+}
+
+#header h1 .ja {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+#header h1 .en {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+#header p {
+  text-align: center;
+  margin-bottom: 8px;
+}
+/* ---------------------------------------------- */
+section {
+  /* border: 1px #000 solid; */
+  background-color: #fff;
+  padding: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 250px;
+  outline: 1px solid #666;
+  border-radius: 20px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+input:focus {
+  outline: 3px solid #666;
+  background-color: silver;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  color: #000;
+  font-weight: 900;
+  letter-spacing: 8px;
+  background-color: goldenrod;
+  outline: 1px solid #333;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+button:hover {
+  color: rgb(90, 77, 0);
+}
+
+/* ---------------------------------------------- */
+.setting {
+  height: 350px;
+  overflow: hidden;
+}
+
+.setting .setting-items {
+  height: 350px;
+}
+
+.setting .setting-items h2,
+.setting .setting-items p {
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------------- */
+.show {
+  display: block;
+  z-index: 15;
+}
+
+.hide {
+  display: none;
+}
+/* ---------------------------------------------- */
+#mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* ---------------------------------------------- */
+#command {
+  max-width: 600px;
+  width: 80%;
+  height: 95%;
+  overflow-y: auto;
+  border-radius: 30px;
+  text-align: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 30;
+}
+
+#command::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+#command::-webkit-scrollbar-track,
+#command::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0);
+}
+
+#command #text {
+  width: 90%;
+  font-size: 32px;
+  font-weight: 900;
+  background-color: goldenrod;
+  padding: 16px;
+  margin: 16px auto;
+}
+
+#command p {
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------------- */
+.ad {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #333;
+  margin: 8px auto;
+}
+/* ---------------------------------------------- */
+footer {
+  text-align: center;
+}
+
+footer p {
+  margin: 8px;
+}
