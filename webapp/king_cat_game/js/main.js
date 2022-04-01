@@ -7,6 +7,7 @@
   const mask = document.querySelector('#mask');
   const command = document.querySelector('#command');
   const text = document.querySelector('#text');
+  const text_copy = document.querySelector('#text_copy');
   const text_empty = [
     "にゃんにゃんする",
     "生涯ネコとしていきる", 
@@ -73,6 +74,11 @@
     mask.classList.add('hide');
     command.classList.add('hide');
     console.log("閉じる"); // ★
+  });
+  
+  // コピー（クリック）
+  text_copy.addEventListener('click', () => {
+    console.log("コピー"); // ★
   });
 }
 

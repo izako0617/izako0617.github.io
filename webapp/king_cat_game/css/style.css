@@ -3,6 +3,8 @@
 body {
   color: #333;
   background-color: goldenrod;
+  background-image: url(../img/gold.png);
+  background-repeat: repeat;
 }
 
 .container {
@@ -16,18 +18,21 @@ a {
 
 /* -------------------------------------------- header -- */
 #header h1 {
-  padding: 24px;
+  background-image: url(../img/crown.png);
+  background-position: center;
+  background-size: contain;
+  padding: 56px 0 32px 0;
   text-align: center;
 }
 
 #header h1 .ja {
   font-size: 64px;
-  line-height: 64px;
+  line-height: 1;
 }
 
 #header h1 .en {
   font-size: 28px;
-  line-height: 28px;
+  line-height: 1;
 }
 
 #header p {
@@ -114,7 +119,7 @@ button:hover {
 /* ---------------------------------------------- */
 #command {
   max-width: 600px;
-  width: 80%;
+  width: 90%;
   height: 95%;
   overflow-y: auto;
   border-radius: 30px;
@@ -142,7 +147,10 @@ button:hover {
   font-size: 32px;
   font-weight: 900;
   background-color: goldenrod;
-  padding: 16px;
+  background-image: url(../img/box_bottom.png),url(../img/box_top.png),url(../img/gold.png);
+  background-position: top, bottom,center;
+  background-size: 80% 90px,80% 90px,cover;
+  padding: 96px 16px;
   margin: 16px auto;
 }
 
