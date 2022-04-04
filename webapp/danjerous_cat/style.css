@@ -1,0 +1,191 @@
+body {
+  font-size: 32px;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: burlywood;
+}
+
+a,
+a:visited {
+  color: #333;
+}
+
+p {
+  text-align: center;
+}
+
+#open {
+  cursor: pointer;
+
+  width: 200px;
+  height: 140px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(58, 1, 1, 0.678));
+  border-bottom: 1px solid #777777;
+  border-radius: 130px 130px 200px 200px;
+  text-align: center;
+  padding: 0;
+  margin: 16px auto 0;
+
+  position: fixed;
+  top: calc((100vh - 140px) / 2);
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#open > p {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  left: 0;
+}
+
+#open > .imocat {
+  background-image: url(imocat.png);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 130px 130px 200px 200px;
+
+  width: 100%;
+  height: 100%;
+  transition: background-size 1s, opacity 1s;
+}
+
+#open > .imocat:hover {
+  background-size: 50%;
+  opacity: 0.6;
+}
+
+
+#mask {
+  background: rgb(255, 105, 105);
+
+  /* 画面の領域 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  /* 画面のレイヤー順(下1,2,3...上) */
+  z-index: 2;
+}
+
+#modal {
+  background: linear-gradient(rgba(255,255,255,0.1),rgba(255, 0, 0, 0.938));
+  min-width: 100%;
+  width: 80%;
+  padding: 0;
+  border-radius: 4px;
+  margin: 0 auto;
+
+  /* 画面の位置 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* 画面が変化する時間 */
+  transition: transform 3s;
+
+  /* 画面のレイヤー順(下1,2,3...上) */
+  z-index: 3;
+}
+
+#modal p span {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#d_cat {
+  background-image: url(d_cat.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  cursor: pointer;
+  margin: 0 auto;
+  object-fit: contain;
+  
+  width: 100%;
+  height:100%;
+
+  /* 画面の領域 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* 画面のレイヤー順(下1,2,3...上) */
+  z-index: 4;
+}
+
+#modal > p {
+  margin: 0 0 20px;
+}
+
+.hidden {
+  display: none;                        /* 初期値: 非表示 */
+}
+
+#mask.hidden {
+  display: none;                        /* 初期値: 非表示 */
+}
+
+#modal.hidden {
+  /* 初期値: 非表示 */
+  display: none;
+  transform: translate(100vw,10vh);       /* 初期値: 画面の欄外、左上上部 */
+}
+
+/* 初期値: 非表示 */
+#d_cat.hidden {
+  display: none;
+}
+
+#modal > p {
+  animation-name: nyaAnime;
+  animation-fill-mode:backwards;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  animation-delay: 0s;
+  animation-direction:alternate;
+  }
+
+#modal > p:nth-child(2n) {
+  animation-direction:alternate-reverse;
+}
+  
+  @keyframes nyaAnime {
+    0% {
+      transform: translate(10vw,0vh);
+    }
+    100% {
+      transform: translate(-10vw,0vh);
+    }
+  }
+
+/* ------------------------------------------------------- */
+#sns-share {
+  position: fixed;
+  bottom: 32px;
+  left: 20px;
+}
+
+footer {
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+}

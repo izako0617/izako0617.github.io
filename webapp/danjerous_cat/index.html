@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>デンジャラスキャット 【いもねこアプリ】</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+	<!-- twitter card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@izako02915498">
+	<meta property="og:title" content="記事のタイトル">
+	<meta property="og:description" content="記事の概要">
+	<meta property="og:image" content="https://izako0617.github.io/webapp/danjerous_cat/img/card.png">
+	<meta property="og:url" content="https://izako0617.github.io/webapp/danjerous_cat/">
+
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<!-- 画面(1): 本画面 -->
+		<div id="open" class="">
+			<div class="imocat"></div>
+			<!-- <img src="imocat.png" alt="いもねこ"> -->
+			<p>おさわり禁止</p>
+		</div>
+		
+		<!-- 画面(1): 本画面(シェアボタン) -->
+		<div id="sns-share">
+			<!-- twitter シェアボタン -->
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+			data-size="large" data-lang="en" 
+			data-text="【危険なネコ】触るとどうなるの…？【いもねこアプリ】" 
+			data-url="https://izako0617.github.io/webapp/danjerous_cat/" 
+			data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+			data-show-count="false">Tweet</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<!-- 画面(2): マスク -->
+		<div id="mask" class="hidden"></div>
+
+		<!-- 画面(3): モーダル -->
+		<div id="modal" class="hidden">
+			<p>　　にゃー！　にゃー！　　　にゃー！　にゃー！　　　にゃー！にゃー！  <span>にゃー！</span></p>
+			<p>にゃー！<span>にゃー！</span>　　　にゃー！　にゃー！にゃにゃー！　<span>にゃー！</span>にゃー！</p>
+			<p>　<span>にゃー！</span>にゃー！　　にゃー！にゃにゃー！　　にゃー！にゃー！　にゃー！</p>
+			<p>にゃー！　　<span>にゃー！</span>にゃにゃー！<span>にゃににゃー！</span>にゃにゃー ！　にゃー！！　にゃー！</p>
+			<p>　　　にゃー！　<span>にゃにゃー！</span>　　にゃー！！　にゃー！にゃー！にゃー！にゃー！</p>
+			<p>にゃー！にゃー！　　　<span>にゃー！</span>　にゃー！にゃにゃー！　にゃー！<span>にゃー！</span></p>
+			<p>　　<span>にゃー！</span>　にゃー！　　　にゃー！　にゃー！　　　にゃー！にゃー！  にゃー！</p>
+		</div>
+		
+		<!-- 画面(4): デンジャラスキャット -->
+		<div id="d_cat" class="hidden">
+		</div>
+	</div>
+	
+	<footer>
+		<a href="../index.html">いもねこアプリ</a>
+	</footer>
+	<!-- js ファイル読み込み -->
+	<script src="main.js"></script>
+</body>
+</html>
