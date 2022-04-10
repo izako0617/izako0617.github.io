@@ -16,6 +16,11 @@
 	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 	<!-- style css -->
 	<link rel="stylesheet" href="style.css">
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+  <script src="https://get.mavo.io/mavo.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -23,18 +28,6 @@
 		<div id="open" class="">
 			<div class="imocat"></div>
 			<p>おさわり禁止</p>
-		</div>
-		
-		<!-- 画面(1): 本画面(シェアボタン) -->
-		<div id="sns-share">
-			<!-- twitter シェアボタン -->
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
-			data-size="large" data-lang="en" 
-			data-text="【危険なネコ】触るとどうなるの…？【いもねこアプリ】" 
-			data-url="https://izako0617.github.io/webapp/danjerous_cat/" 
-			data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
-			data-show-count="false">Tweet</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 
 		<!-- 画面(2): マスク -->
@@ -56,8 +49,24 @@
 		</div>
 	</div>
 	
+		
 	<footer>
-		<a href="../index.html">いもねこアプリ</a>
+		<p>
+			<span id="sns-share">
+				<!-- twitter シェアボタン -->
+				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+				data-size="large" data-lang="en"
+				data-text="【危険なネコ】触るとどうなるの…？【いもねこアプリ】"
+				data-url="https://izako0617.github.io/webapp/danjerous_cat/"
+				data-hashtags="いもねこアプリ,ねこ,cat,webアプリ"
+				data-show-count="false">Tweet</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</span>
+			<span mv-app="love" mv-mode="edit" mv-bar="hide" mv-storage="https://github.com/izako0617/data/" mv-autosave>
+				<button property="danjerous_cat" mv-clicked><i class="bi bi-suit-heart"></i></button> [danjerous_cat]
+			</span>
+		</p>
+		<p><a href="../index.html">いもねこアプリ</a></p>
 	</footer>
 	<!-- js ファイル読み込み -->
 	<script src="main.js"></script>
