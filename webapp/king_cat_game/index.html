@@ -14,8 +14,13 @@
   <meta name="twitter:image" content="https://izako0617.github.io/webapp/king_cat_game/img/card.png">
   <!-- reset min css -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <!-- style css -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+  <script src="https://get.mavo.io/mavo.min.js"></script>
 </head>
 <body>
   <header id="header" class="container">
@@ -115,7 +120,7 @@
     <section id="command" class="hide">
       <h2>玉様からの命令にゃ！</h2>
       <div id="text">
-        【誰】が【誰】の【何】を【いつ】【どこ】で【どんなふうに】【何する】のにゃ！
+        【誰】が【いつ】【誰】の【何】を【どこ】で【どんなふうに】【何する】のにゃ！
       </div>
       <!-- <button id="text_copy">コピー</button> -->
       <p>必ず実行するのにゃ！ ツイートで宣言するかにゃ？</p>
@@ -127,10 +132,9 @@
         data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
         data-show-count="false">Tweet</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- data-via="izako02915498" -->
       </p>
       <p class="ad">
-        ----- ad -----<br><br>
+        ----- AD -----<br><br>
         玉様ゲームで遊べるのは いもねこアプリだけ！
       </p>
       <button id="btn_close">閉じる</button>
@@ -153,9 +157,9 @@
   </main>
 
   <footer class="container">
-    <!-- ■ sns ■ -->
-    <section id="sns">
-      <div class="sns">
+    <section>
+      <!-- ■ sns ■ -->
+      <p class="sns">
         <!-- twitter シェアボタン -->
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
         data-text="【玉様ゲーム】玉様からの命令は絶対です！【いもねこアプリ】" 
@@ -163,15 +167,17 @@
         data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
         data-show-count="false">Tweet</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-        <!-- data-via="izako02915498"  -->
+        <!-- いいねボタン -->
+        <span mv-app="love" mv-mode="edit" mv-bar="hide" mv-storage="https://github.com/izako0617/data/" mv-autosave>
+          <button property="king_cat_game" mv-clicked><i class="bi bi-suit-heart"></i></button> [king_cat_game]
+        </span>
+      </p>
       <p class="ad">
-        ----- ad -----<br><br>
+        ----- AD -----<br><br>
         玉様ゲームで遊べるのは いもねこアプリだけ！
       </p>
     </section>
-
-    <p><a href="../index.html">いもねこアプリ</a></p>
+    <p class="imo"><a href="../index.html">いもねこアプリ</a></p>
   </footer>
 
   <script src="./js/main.js"></script>

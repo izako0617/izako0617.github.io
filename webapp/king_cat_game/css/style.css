@@ -63,7 +63,8 @@ input:focus {
   background-color: silver;
 }
 
-button {
+#btn_open,
+#btn_close {
   width: 250px;
   height: 50px;
   line-height: 50px;
@@ -144,8 +145,8 @@ button:hover {
 
 #command #text {
   width: 90%;
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 28px;
+  font-weight: 700;
   background-color: goldenrod;
   background-image: url(../img/box_bottom.png),url(../img/box_top.png),url(../img/gold.png);
   background-position: top, bottom,center;
@@ -154,22 +155,29 @@ button:hover {
   margin: 16px auto;
 }
 
+#command #text span {
+  font-size: 40px;
+  font-weight: 900;
+  padding: 0 4px 0 16px;
+}
+
 #command p {
   margin-bottom: 8px;
 }
 
 /* ---------------------------------------------- */
+footer {
+  text-align: center;
+}
+
 .ad {
   width: 100%;
   height: 100px;
   border: 1px solid #333;
   margin: 8px auto;
 }
-/* ---------------------------------------------- */
-footer {
-  text-align: center;
-}
 
-footer p {
-  margin: 8px;
+footer .imo {
+  height: 32px;
+  line-height: 32px;
 }

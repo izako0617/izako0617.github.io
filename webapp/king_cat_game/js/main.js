@@ -49,7 +49,7 @@
     const text_ja = [" が ", " に ", " の ", " を ", " で ", " ", " のにゃ！"];
     for (let i = 0; i < set_text.length; i++) {
       if (set_text[i] !== "") {
-        text_change += set_text[i] + text_ja[i];
+        text_change += "<span>" + set_text[i] + "</span>" + text_ja[i];
       } else {
         text_change += "";
       }
@@ -62,7 +62,7 @@
     }
 
     console.log(text_change); // ★
-    text.textContent = text_change;
+    text.innerHTML = text_change;
 
     mask.classList.remove('hide');
     command.classList.remove('hide');
