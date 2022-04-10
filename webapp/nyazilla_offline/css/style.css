@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fadein {
+  animation-name: fadein;
+  /* 開始と終了時の状態（animation-fill-mode）
+    none      → 指定なし(初期値)
+    forwards  → 元の状態に戻らずアニメーション最後の状態を維持
+    backwards → アニメーションの最初の状態に戻る
+    both      → backwardsとforwardsの両方の状態を適用 */
+  animation-fill-mode: forwards;
+  /* 再生1回分の時間（animation-duration） */
+  animation-duration: 10s;
+  /* 再生回数（animation-iteration-count）
+    数値     → 数値で再生回数を指定する（初期値は1）
+    infinite → 無限に再生を繰り返す */
+  animation-iteration-count: 1;
+  /* 進行具合（animation-timing-function）
+    ease        → 開始時と終了時が緩やかに変化(初期値)
+    ease-in     → 開始時は緩やか、終了時は早く
+    ease-out    → 開始時は早く、  終了時は緩やか
+    ease-in-out → 開始時と終了時は、かなり緩やかに変化
+    linear      → 開始時から終了時まで一定に変化
+    steps(数値, start または end) → パラパラ漫画のように数値をコマ数で変化
+    cubic-bezier（n,n,n,n）→ 変化の進行割合を3次ベジェ曲線で指定 */
+  animation-timing-function: steps(4, start);
+  /* 開始を遅延（animation-delay） */
+  animation-delay: 0;
+  /* 再生方向（animation-direction）
+    normal            → 普通方向の再生で動きを繰り返す(初期値)
+    reverse           → 逆方向の再生で動きを繰り返す
+    alternate         → 奇数回では普通方向、偶数回では逆方向の再生で動きを繰り返す
+    alternate-reverse → 毎回逆方向の再生、奇数回では逆方向、偶数回では普通方向 */
+  animation-direction: normal;
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* ------------------------------------------------- nyazilla -- */
+#nyazilla {
+  font-family: 'Press Start 2P', cursive;
+  color: #666;
+  width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  /* outline: 1px solid #000; */
+  margin: 32px 0;
+  position: relative;
+}
+
+#nyazilla h1 {
+  letter-spacing: 16px;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+}
+
+#nyazilla p {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+#nyazilla ul,
+#nyazilla li {
+  /* outline: 1px dashed #000; */
+  text-align: center;
+  margin-left: 0;
+}
+
+#nyazilla #yline {
+  /* outline: 1px dashed #000; */
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  width: calc(100% / 10);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#nyazilla #xline,
+#nyazilla #xsky {
+  width: 100%;
+  height: 150px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#nyazilla #xline li,
+#nyazilla #xsky li {
+  width: calc(100% / 10);
+  height: 100%;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* @media (max-width: 500px) {
+  #nyazilla #xline li {
+    width: 100px;
+    border: 1px solid #000;
+  }
+} */
+
+/* -------------------------------------------------  -- */
+.x0 {
+  /* background-color: pink; */
+  background-image: url(../img/x0.png);
+}
+
+.x1 {
+  /* background-color: red; */
+  background-image: url(../img/x1.png);
+}
+
+.xb1 {
+  background-image: url(../img/back1.png);
+}
+
+.xb2 {
+  background-image: url(../img/back2.png);
+}
+
+.xend {
+  /* background-color: goldenrod; */
+  background-image: url(../img/xend.png);
+}
+
+.y0 {
+  background-image: url(../img/y0.png);
+}
+
+.y1 {
+  background-image: url(../img/y1.png);
+}
+
+.y2 {
+  background-image: url(../img/y2.png);
+}
+
+.yj {
+  animation-name: jumpAnime;
+  /* 開始と終了時の状態（animation-fill-mode）
+    none      → 指定なし(初期値)
+    forwards  → 元の状態に戻らずアニメーション最後の状態を維持
+    backwards → アニメーションの最初の状態に戻る
+    both      → backwardsとforwardsの両方の状態を適用 */
+  animation-fill-mode: forwards;
+  /* 再生1回分の時間（animation-duration） */
+  animation-duration: 3.5s;
+  /* 再生回数（animation-iteration-count）
+    数値     → 数値で再生回数を指定する（初期値は1）
+    infinite → 無限に再生を繰り返す */
+  animation-iteration-count: 1;
+  /* 進行具合（animation-timing-function）
+    ease        → 中央に向けて変化量が増加し、最後に向けて減少(初期値)
+    ease-in     → ゆっくり始まり、終了まで加速
+    ease-out    → 速く始まり、速度を落としながら続く
+    ease-in-out → ゆっくり変化し、速度を上げ、また速度を落とします
+    linear      → 等しい速度
+    steps(数値, start または end) → パラパラ漫画のように数値をコマ数で変化
+    cubic-bezier（n,n,n,n）→ 変化の進行割合を3次ベジェ曲線で指定 */
+  animation-timing-function: ease-out;
+  /* 開始を遅延（animation-delay） */
+  animation-delay: 0;
+  /* 再生方向（animation-direction）
+    normal            → 普通方向の再生で動きを繰り返す(初期値)
+    reverse           → 逆方向の再生で動きを繰り返す
+    alternate         → 奇数回では普通方向、偶数回では逆方向の再生で動きを繰り返す
+    alternate-reverse → 毎回逆方向の再生、奇数回では逆方向、偶数回では普通方向 */
+  animation-direction: normal;
+  }
+  
+  @keyframes jumpAnime {
+    0% {
+      background-position: bottom;
+    }
+    45% {
+      background-position: top;
+    }
+    55% {
+      background-position: top;
+    }
+    100% {
+      background-position: bottom;
+    }
+  }
+
+.onoff {
+  animation-name: onoffAnime;
+  animation-fill-mode: backwards;
+  animation-duration: 0.5s;
+  animation-iteration-count: 4;
+}
+  @keyframes onoffAnime {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+/* ------------------------------------------------- text -- */
+#text {
+  margin-bottom: 72px;
+}
+
+#text h2 {
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+#text #btn_question {
+  position: relative;
+}
+
+#text #btn_question dd {
+  border: 1px solid #000;
+  border-radius: 8px 0;
+  padding: 2px;
+  font-size: small;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+}
+
+#text ul {
+  margin-left: 40px;
+}
+
+#text .btn {
+  text-align: right;
+}
+
+/* ------------------------------------------------- footer -- */
+footer {
+  text-align: center;
+}
+
+footer #sns-share {
+  margin-bottom: 32px;
+}
+
+footer .ad {
+  height: 100px;
+  border: 1px solid #333;
+}
+
+footer .imoapp {
+  height: 40px;
+  font-size: small;
+  line-height: 40px;
+}
