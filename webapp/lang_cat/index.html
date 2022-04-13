@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>にゃん語 【いもねこアプリ】</title>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="izako02915498">
+  <meta name="twitter:title" content="【にゃん語】もっと かわいく話そ！【いもねこアプリ】">
+  <meta name="twitter:description" content="誰でもかわいく！にゃん語で話そう！">
+  <meta name="twitter:image" content="https://izako0617.github.io/webapp/lang_cat/img/card.png">
+  <!-- reset min css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+  <script src="https://get.mavo.io/mavo.min.js"></script>
+</head>
+<body>
+  <header class="container">
+    <p>誰でも簡単！ かわいく話せる！</p>
+    <h1>にゃん語 ← 日本語</h1>
+  </header>
+  <main class="container">
+    <section id="show01">
+      <dl>
+        <dt id="question">
+          にゃん語とは
+          <i class="bi bi-question-circle"></i>
+        </dt>
+        <dd id="answer" class="hide">
+          <p>「手 → 前足」や「な → にゃ」など、<br>
+            ネコのようにかわいく変換してくれるよ。</p>
+          <p>語尾もかわいいにゃーฅ^•ﻌ•^ฅ♡</p>
+          <p>他にもどんな にゃん語があるか、探してみてね。</p>
+          <p>現在にゃん語辞書登録数 ●件</p>
+          <p><i id="close" class="bi bi-x-circle"></i> とじるにゃー！！</p>
+        </dd>
+      </dl>
+      <p>
+        <textarea name="msg" id="msg_ja" placeholder="ここに日本語入力… (140文字)" maxlength="140"></textarea>
+      </p>
+      <p><button id="btn">にゃーん!!</button></p>
+    </section>
+
+    <section id="show02" class="img cat02">
+      <div id="msg_cat">
+        <button id="copy" class="bi bi-clipboard"> copy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <!-- ■ sns ■ -->
+    <section id="sns-share">
+      <!-- twitter シェアボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
+      data-text="【にゃん語】もっと かわいく話そ！【いもねこアプリ】" 
+      data-url="https://izako0617.github.io/webapp/lang_cat/" 
+      data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+      data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- いいねボタン -->
+      <span mv-app="love" mv-mode="edit" mv-bar="hide" mv-storage="https://github.com/izako0617/data/" mv-autosave>
+        <button property="lang_cat" mv-clicked><i class="bi bi-suit-heart"></i></button> [lang_cat]
+      </span>
+    </section>
+    <p class="ad">
+      ----- AD -----<br><br>
+      にゃん語で遊べるのは いもねこアプリだけ！
+    </p>
+    <p class="imoapp"><a href="../index.html">いもねこアプリ</a></p>
+  </footer>
+
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>

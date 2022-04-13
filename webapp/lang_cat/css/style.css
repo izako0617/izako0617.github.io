@@ -1,0 +1,179 @@
+@charset "UTF-8";
+body {
+  background-color: cornsilk;
+  color: #333;
+}
+
+a,
+a:visited {
+  color: #333;
+}
+
+a:hover {
+  color: #be834c;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 0 16px;
+}
+
+/* ------------------------------------------------- #show01 -- */
+#show01 h1 {
+  margin-bottom: 10px;
+}
+
+#show01 #msg_ja {
+  width: 350px;
+  height: 150px;
+  /* border: 1px #333 solid; */
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+}
+
+#show01 #btn {
+  width: 350px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  background-color: #be834c;
+  color: #fff;
+  border-radius: 10px;
+  margin: 0 auto 32px auto;
+  padding: 0 10px;
+}
+
+#show01 #btn:hover {
+  font-size: larger;
+  letter-spacing: 4px;
+}
+
+#show01 dl {
+  position: relative;
+}
+
+#show01 dt {
+  font-size: small;
+  cursor: pointer;
+}
+
+#show01 i {
+  color: #be834c;
+  cursor: pointer;
+}
+
+#show01 dd {
+  font-size: small;
+  background-color: #fff;
+  border: 1px solid #be834c;
+  border-radius: 0 10px 10px 10px;
+  padding: 4px 8px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* ------------------------------------------------- #show02 -- */
+#show02 #msg_cat {
+  width: 350px;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 5;
+}
+
+#show02 #msg_cat::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 30px;
+  border-color: transparent transparent transparent #ffffff;
+
+  position: absolute;
+  top: 240px;
+  right: -30px;
+}
+
+@media (max-width: 600px) {
+  #show02 #msg_cat {
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  #show02 #msg_cat::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 0;
+  }
+}
+
+#show02 #msg_cat #copy {
+  color: #be834c;
+  background-color: #fff;
+  border-radius: 0 0 10px 0;
+  padding: 2px 8px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#show02 #msg_cat #copy:hover {
+  color: #fff;
+  background-color: #be834c;
+}
+
+.img {
+  background-size: contain;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+}
+
+.cat01 { background-image: url(../img/cat01.png) }
+.cat02 { background-image: url(../img/cat02.png) }
+.cat03 { background-image: url(../img/cat03.png) }
+.cat04 { background-image: url(../img/cat04.png) }
+.cat05 { background-image: url(../img/cat05.png) }
+.cat06 { background-image: url(../img/cat06.png) }
+.cat07 { background-image: url(../img/cat07.png) }
+.cat08 { background-image: url(../img/cat08.png) }
+.cat09 { background-image: url(../img/cat09.png) }
+.cat10 { background-image: url(../img/cat10.png) }
+.cat11 { background-image: url(../img/cat11.png) }
+.cat12 { background-image: url(../img/cat12.png) }
+.cat13 { background-image: url(../img/cat13.png) }
+
+/* ------------------------------------------------- footer -- */
+footer {
+  text-align: center;
+}
+
+footer #sns-share {
+  margin-bottom: 32px;
+}
+
+footer .ad {
+  height: 100px;
+  border: 1px solid #333;
+}
+
+footer .imoapp {
+  height: 40px;
+  font-size: small;
+  line-height: 40px;
+}
