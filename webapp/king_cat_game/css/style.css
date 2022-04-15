@@ -76,10 +76,33 @@ input:focus {
   border-radius: 20px;
   display: block;
   margin: 0 auto 16px auto;
+  position: relative;
 }
 
-button:hover {
-  color: rgb(90, 77, 0);
+@media (min-width: 600px) {
+  /* PCのみボタンアニメーション */
+  #btn_open::before,
+  #btn_close::before {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 30%;
+    height: 100%;
+    background: 
+      linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.5) 100%);
+    transform: skewX(-25deg);
+    transition: .5s;
+    content: '';
+  }
+  
+  #btn_open:hover::before,
+  #btn_close:hover::before {
+    animation: flash 2s;
+  }
+  
+  @keyframes flash {100% {left: 120%;}}
 }
 
 /* ---------------------------------------------- */
