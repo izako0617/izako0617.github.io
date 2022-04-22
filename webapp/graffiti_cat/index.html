@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あの偉猫に落書き【いもねこアプリ】</title>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="izako02915498">
+  <meta name="twitter:title" content="【あの偉猫に落書き】みんなもやったことあるよね？【いもねこアプリ】">
+  <meta name="twitter:description" content="そうあれは、学生時代。退屈な授業。おもむろに開いた教科書。ふと、目が合った…。">
+  <meta name="twitter:image" content="https://izako0617.github.io/webapp/graffiti_cat/img/card.png">
+  <!-- reset min css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+  <script src="https://get.mavo.io/mavo.min.js"></script>
+</head>
+<body>
+  <header class="container">
+    <p>授業つまんないな…</p>
+    <h1>あの偉猫に落書き</h1>
+  </header>
+
+  <main class="container">
+    <!-- ■ 偉猫 表紙 -->
+    <section id="cover" class="">
+      <p>そうあれは、学生時代。</p>
+      <p>退屈な授業。</p>
+      <p>おもむろに開いた教科書と、<br>
+      ふと、目が合ったんだ。</p>
+      <p>そして私は鉛筆をにぎった…</p>
+      <button id="btn-open"><span>教科書を開く</span></button>
+    </section>
+
+    <!-- ■ 偉猫 目次 -->
+    <section id="index" class="hide">
+      <h2>世界の偉猫たち</h2>
+      <h3>目次</h3>
+      <dl>
+        <dt></dt>
+        <dd></dd>
+      </dl>
+    </section>
+
+    <!-- ■ 偉猫 プロフィール -->
+    <section id="cats" class="hide">
+      <button id="btn-enter" class="btn-cat r-img">
+        <img src="./img/cat01.png" alt="ど偉い猫">
+        <table data="catsグリッド"> </table>
+      </button>
+      <h3>異名</h3>
+      <h2>とあるど偉い猫</h2>
+      <h4>19XX - 19XX</h4>
+      <h5>国籍</h5>
+      <p>
+        こんなことやったよ！あんなこともしたよ！
+        すんごい猫だよ！歴史を変えた猫さ！
+        そりゃ教科書にも載っちゃうよね！
+        ねこかわいい。にゃにゃにゃにゃーーーーん！！
+      </p>
+      <p id="page"> - 0 - </p>
+    </section>
+
+    <!-- ■ 偉猫 ナビゲーション -->
+    <section id="btn" class="hide">
+      <ul>
+        <li><button id="btn-previous">前</button></li>
+        <li><button id="btn-enter">落書き</button></li>
+        <li><button id="btn-next">次</button></li>
+      </ul>
+    </section>
+
+    <!-- ■ マスク -->
+    <section id="mask" class="hide"> </section>
+
+    <!-- ■ 落書き -->
+    <section id="paint" class="hide">
+      <ul id="tool">
+        <li>
+          <button id="btn-open">
+            <i class="bi bi-book"></i><br>
+            選びなおす<br>
+            <span id="catname">偉猫 No.1</span>
+          </button>
+          </label>
+        </li>
+        <li>
+          <button id="btn-grid">
+            <i class="bi bi-square hide"></i>
+            <i class="bi bi-grid-3x3"></i><br>
+            グリッド
+          </button>
+          <select id="btn-dot">
+            <option value="20">20 x 20</option>
+            <option value="30">30 x 30</option>
+            <option value="40">40 x 40</option>
+          </select>
+        </li>
+        <li>
+          <button id="btn-pencil" class="select">
+            <i class="bi bi-pencil"></i><br>
+            色鉛筆
+          </button>
+          <input id="btn-color" type="color">
+        </li>
+        <li>
+          <button id="btn-eraser">
+            <i class="bi bi-eraser"></i><br>
+            消しゴム
+          </button>
+        </li>
+        <il>
+          <button id="btn-clear">
+            <i class="bi bi-trash"></i><br>
+            白紙にする
+          </button>
+        </il>
+        <li>
+          <button id="btn-exit">
+            <i class="bi bi-person-video3"></i><br>
+            <!-- <i class="bi bi-stars"></i><br> -->
+            <s>つまらない</s><br>
+            授業に戻る
+          </button>
+        </li>
+      </ul>
+      <div id="canvas" class="catimg">
+        <img src="./img/cat01.png">
+        <table data="canvasグリッド"> </table>
+      </div>
+    </section>
+
+  </main>
+  <footer class="container">
+    <!-- ■ sns ■ -->
+    <section id="sns-share">
+      <!-- twitter シェアボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
+      data-text="【あの偉猫に落書き】みんなもやったことあるよね？【いもねこアプリ】" 
+      data-url="https://izako0617.github.io/webapp/graffiti_cat/" 
+      data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+      data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- いいねボタン -->
+      <span mv-app="love" mv-mode="edit" mv-bar="hide" mv-storage="https://github.com/izako0617/data/" mv-autosave>
+        <button property="graffiti_cat" mv-clicked><i class="bi bi-suit-heart"></i></button> [graffiti_cat]
+      </span>
+    </section>
+    <p class="ad">
+      ----- AD -----<br><br>
+      あの偉猫に落書きして遊べるのは いもねこアプリだけ！
+    </p>
+    <p class="imoapp"><a href="../index.html">いもねこアプリ</a></p>
+
+  </footer class="container">
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>

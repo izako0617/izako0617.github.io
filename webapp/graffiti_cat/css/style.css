@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+body {
+  background-color: cornsilk;
+  background-image: url(../img/classroom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 64px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* ------------------------------------------------- #cover -- */
+header {
+  height: 80px;
+}
+
+/* ------------------------------------------------- #cover -- */
+#cover {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url(../img/book2.png);
+  background-color: rgba(255, 255, 255, 0.6);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: bottom 0 right 0;
+  text-align: center;
+}
+
+#cover p {
+  padding: 24px 0;
+}
+
+#cover button {
+  width: 50%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#cover button span {
+  position: relative;
+}
+
+#cover button span:hover::before {
+  content: "▶ ";
+  position: absolute;
+  left: -30px;
+}
+
+/* ------------------------------------------------- #index -- */
+/* ------------------------------------------------- #cats --- */
+/* ------------------------------------------------- #btn ---- */
+/* ------------------------------------------------- #finish ---- */
+#index,
+#cats,
+#finish,
+#btn {
+  width: 450px;
+  max-width: 100%;
+  padding-left: 32px;
+  padding-right: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#index,
+#cats,
+#finish {
+  background-image: url(../img/bookopen1.png);
+  background-size: 100% 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  min-height: 400px;
+  position: absolute;
+  top: 30px;
+}
+
+#cats #page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#btn {
+  position: fixed;
+  background-color: #fff;
+  min-height: 64px;
+  top: 450px;
+}
+
+/* ------------------------------------------------- #index -- */
+#index dl {
+  margin-left: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#index dl dt { width: 80%; line-height: 2;}
+#index dl dd { width: 20%; line-height: 2;}
+
+/* ------------------------------------------------- #cats --- */
+#cats .btn-cat,
+#finish .btn-cat {
+  width: 150px;
+  height: 150px;
+  outline: #aaa 1px solid;
+  margin-bottom: 16px;
+  
+  position: relative;
+}
+
+#cats img,
+#finish img {
+  width: 100%;
+}
+
+#cats table,
+#finish table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.l-img {
+  float: left;
+  margin-right: 32px;
+}
+
+.r-img {
+  float: right;
+  margin-left: 32px;
+}
+
+#cats h4,
+#finish h4 {
+  font-size: smaller;
+}
+
+#cats #page {
+  margin: 16px 0;
+  text-align: center;
+}
+
+/* ------------------------------------------------- #btn -- */
+#btn ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: stretch;
+}
+
+#btn button {
+  text-align: center;
+  width: 60px;
+}
+
+#btn i {
+  font-size: 24px;
+}
+
+#btn span {
+  font-size: 12px;
+}
+
+/* ------------------------------------------------- #mask -- */
+#mask {
+  background-color: #333;
+  opacity: 0.5;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+/* ------------------------------------------------- #paint -- */
+#tool {
+  background-color: #fff;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 24px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+#tool li {
+  width: 60px;
+}
+
+#tool i {
+  font-size: 24px;
+}
+
+.select {
+  color: orange;
+}
+
+#canvas {
+  width: 450px;
+  height: 450px;
+  outline: 3px solid #333;
+
+  position: relative;
+}
+
+#canvas img {
+  /* opacity: 0.5; */
+  width: 100%;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table td {
+  outline: #aaa solid 1px;
+}
+
+.grid-off {
+  outline: #fff solid 0px;
+}
+
+/* ------------------------------------------------- footer -- */
+footer {
+  text-align: center;
+}
+
+footer #sns-share {
+  margin-bottom: 32px;
+}
+
+footer .ad {
+  height: 100px;
+  border: 1px solid #333;
+}
+
+footer .imoapp {
+  height: 40px;
+  font-size: small;
+  line-height: 40px;
+}
