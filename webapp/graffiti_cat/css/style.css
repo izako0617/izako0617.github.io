@@ -39,6 +39,7 @@ header {
 /* ------------------------------------------------- #cover -- */
 #cover {
   width: 100%;
+  min-height: 500px;
   height: calc(100vh - 80px);
   background-image: url(../img/book2.png);
   background-color: rgba(255, 255, 255, 0.6);
@@ -74,7 +75,6 @@ header {
 /* ------------------------------------------------- #finish ---- */
 #index,
 #cats,
-#finish,
 #btn {
   width: 450px;
   max-width: 100%;
@@ -86,12 +86,12 @@ header {
 }
 
 #index,
-#cats,
-#finish {
+#cats {
   background-image: url(../img/bookopen1.png);
   background-size: 100% 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-bottom: 500px;
   min-height: 400px;
   position: absolute;
   top: 30px;
@@ -108,7 +108,7 @@ header {
   position: fixed;
   background-color: #fff;
   min-height: 64px;
-  top: 450px;
+  bottom: -30px;
 }
 
 /* ------------------------------------------------- #index -- */
@@ -123,8 +123,7 @@ header {
 #index dl dd { width: 20%; line-height: 2;}
 
 /* ------------------------------------------------- #cats --- */
-#cats .btn-cat,
-#finish .btn-cat {
+#cats .btn-cat {
   width: 150px;
   height: 150px;
   outline: #aaa 1px solid;
@@ -133,13 +132,11 @@ header {
   position: relative;
 }
 
-#cats img,
-#finish img {
+#cats img {
   width: 100%;
 }
 
-#cats table,
-#finish table {
+#cats table {
   width: 100%;
   height: 100%;
   border-collapse: collapse;
@@ -160,8 +157,7 @@ header {
   margin-left: 32px;
 }
 
-#cats h4,
-#finish h4 {
+#cats h4 {
   font-size: smaller;
 }
 
