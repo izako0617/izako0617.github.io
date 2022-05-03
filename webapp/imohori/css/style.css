@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+body {
+  background-color: cornsilk;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+section {
+  margin-bottom: 64px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* ------------------------------------------------- RPG デザイン -- */
+.dot-ja {
+  font-family: 'DotGothic16', sans-serif;
+} 
+
+.dot-en {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.rpg-msg {
+  background: #000;
+  color: aliceblue;
+  border: solid aliceblue 8px;
+  border-radius: 24px;
+  padding: 16px 16px 16px 32px;
+}
+
+.rpg-msg .scroll {
+  overflow: scroll;
+  width: 100%;
+  max-height: calc(100vh - 64px);
+}
+
+.rpg-msg .scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+.rpg-msg .scroll::-webkit-scrollbar-thumb {
+  background: aliceblue;
+  border-radius: 24px;
+}
+
+.rpg-msg ul {
+  margin-top: 32px;
+}
+
+.rpg-msg ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.rpg-msg button {
+  color: aliceblue;
+}
+
+.rpg-msg li:hover::before {
+  content: "▶ ";
+  position: absolute;
+  left: -24px;
+}
+
+/* ------------------------------------------------- 画面遷移 -- */
+.hide {
+  display: none;
+}
+
+.scroll-off {
+  overflow-y:hidden;
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+#mask {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+#map,
+#imo {
+  text-align: center;
+  max-width: 600px;
+  max-height: 100vh;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+}
+
+/* ------------------------------------------------- header -- */
+header {
+  min-height: 100px;
+} 
+
+header div {
+  padding-top: 16px;
+}
+
+/* ------------------------------------------------- #ground -- */
+#ground {
+  padding: 32px 0 0 0;
+  min-height: 500px;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+#ground .start{
+  width: 350px;
+  margin: 0 auto;
+}
+
+#ground .ground-img {
+  background-color: skyblue;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+#ground .ground-img div:nth-child(1) {
+  background-size: contain;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 50%;
+  bottom: 20%;
+}
+
+#ground .ground-img div:nth-child(2) {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+#ground .ground-img div:nth-child(3) {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ------------------------------------------------- #underground -- */
+#underground {
+  background: burlywood;
+  width: 100%;
+  min-height: 500px;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+#underground #cat,
+#underground #world,
+#underground .btn_nav {
+  width: 300px;
+  height: 300px;
+  outline: 1px #333 solid;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#underground .menu {
+  width: 300px;
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#underground #cat img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: calc((100% / 3) + 0px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#underground .btn_nav i {
+  font-size: 40px;
+  line-height: 0;
+}
+
+#underground .btn_nav #btn_l {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#underground .btn_nav #btn_r {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#underground .btn_nav #btn_t {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#underground .btn_nav #btn_b {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#underground #world table {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/clay.png);
+  background-size: 8%;
+  background-repeat: repeat;
+}
+
+#underground #world table tr td {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+}
+
+/* ------------------------------------------------- #map -- */
+#map table{
+  margin: 32px auto;
+}
+
+#map table tr td {
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+#map dl {
+  text-align-last: left;
+  width: 150px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#map dt {
+  width: 20%;
+}
+
+#map dd {
+  width: 80%;
+  padding-left: 8px;
+}
+
+/* ------------------------------------------------- ねこアニメ -- */
+  #cat-move {
+    position: absolute;
+    bottom: calc((100% / 3) + 0px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+
+  .cat_move_r {
+    animation-name: anime_cat_move_rl;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+
+  .cat_move_l {
+    animation-name: anime_cat_move_rl;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+  }
+
+  .cat_move_t {
+    animation-name: anime_cat_move_tb; 
+    animation-direction: reverse;
+  }
+
+  .cat_move_b {
+    animation-name: anime_cat_move_tb;
+    animation-direction: normal;
+  }
+
+  @keyframes anime_cat_move_rl {
+    0% {left: 50%;}
+    40% {opacity: 1;}
+    49% {left: 90%;}
+    50% {opacity: 0;}
+    51% {left: 10%;}
+    60% {opacity: 1;}
+    100% {left: 50%;}
+  }
+
+  @keyframes anime_cat_move_tb {
+    0% {top: 50%;}
+    40% {opacity: 1;}
+    49% {top: 80%;}
+    50% {opacity: 0;}
+    51% {top: 0%;}
+    60% {opacity: 1;}
+    100% {top: 50%;}
+  }
+
+  #cat-run {
+    width: 50px;
+    height: 50px;
+
+    background-size: contain;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .cat_c { background-image: url(../img/cat_c.png);}
+  .cat_run_t { animation-name: anime_cat_run_t;}
+  .cat_run_r { animation-name: anime_cat_run_r;}
+  .cat_run_b { animation-name: anime_cat_run_b;}
+  .cat_run_l { animation-name: anime_cat_run_l;}
+
+  @keyframes anime_cat_run_t {
+    0% { background-image: url(../img/cat_t0.png);}
+    50% {background-image: url(../img/cat_t0.png);}
+    51% {background-image: url(../img/cat_t1.png);}
+    100% {background-image: url(../img/cat_t1.png);}
+  }
+  
+  @keyframes anime_cat_run_r {
+    0% { background-image: url(../img/cat_r0.png);}
+    50% {background-image: url(../img/cat_r0.png);}
+    51% {background-image: url(../img/cat_r1.png);}
+    100% {background-image: url(../img/cat_r1.png);}
+  }
+  
+  @keyframes anime_cat_run_b {
+    0% { background-image: url(../img/cat_b0.png);}
+    50% {background-image: url(../img/cat_b0.png);}
+    51% {background-image: url(../img/cat_b1.png);}
+    100% {background-image: url(../img/cat_b1.png);}
+  }
+  
+  @keyframes anime_cat_run_l {
+    0% { background-image: url(../img/cat_l0.png);}
+    50% {background-image: url(../img/cat_l0.png);}
+    51% {background-image: url(../img/cat_l1.png);}
+    100% {background-image: url(../img/cat_l1.png);}
+  }
+
+/* ------------------------------------------------- 選択背景 -- */
+.root_cat { 
+  /* background-color: rgb(118, 161, 16); */
+  background: url(../img/cat_c.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+}
+
+.root_0 { /* 掘る前の土 */
+  background-color: burlywood;
+  background-image: url(../img/clay.png);
+  background-size: 8%;
+  background-repeat: repeat;
+  color: transparent;
+}
+
+.root_1 { /* 掘った後の土 */
+  background-color: darkgoldenrod;
+  color: transparent;
+}
+
+.root_2 { /* 葉っぱ */
+  background-image: url(../img/leaf.png);
+  background-color: skyblue;
+  background-size: contain;
+  color: transparent;
+}
+
+.root_5 { /* 空 */
+  background-color: skyblue;
+}
+
+.root_7 { /* 未発見のイモ */
+  background-image: url(../img/imo00.png);
+  background-size: contain;
+  background-color: darkgoldenrod;
+  color: transparent;
+}
+
+.root_8 { /* 伝説のイモ */
+  background-image: url(../img/imo02.png);
+  background-size: contain;
+  background-color: darkgoldenrod;
+  color: transparent;
+}
+
+.root_9 { /* 普通のイモ */
+  background-image: url(../img/imo01.png);
+  background-size: contain;
+  background-color: darkgoldenrod;
+  color: transparent;
+}
+/* ------------------------------------------------- #imo -- */
+#imo #imo-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: transparent;
+  margin-bottom: 16px;
+}
+
+/* ------------------------------------------------- footer -- */
+footer {
+  text-align: center;
+}
+
+footer #sns-share {
+  margin-bottom: 32px;
+}
+
+footer .ad {
+  height: 100px;
+  border: 1px solid #333;
+}
+
+footer .imoapp {
+  height: 40px;
+  font-size: small;
+  line-height: 40px;
+}

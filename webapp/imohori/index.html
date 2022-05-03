@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伝説のイモを探せ！【いもねこアプリ】</title>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="izako02915498">
+  <meta name="twitter:title" content="【伝説のイモを探せ！】ここほれ！にゃんこ！【いもねこアプリ】">
+  <meta name="twitter:description" content="伝説のイモをもとめて、いもねこ探検隊は畑の奥地へと向かったのだった…。">
+  <meta name="twitter:image" content="https://izako0617.github.io/webapp/imohori/img/card.png">
+  <!-- reset min css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- style css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/dot.css">
+  <!-- Mavo -->
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+  <script src="https://get.mavo.io/mavo.min.js"></script>
+</head>
+<body>
+  <header class="container">
+    <div>
+      <h1>伝説のイモを探せ！</h1>
+      <p>伝説のイモをもとめて、いもねこは畑の奥地へと向かったのだった…。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ■ 地上 ■ -->
+    <section id="ground" class="dot-ja">
+      <div class="start rpg-msg">
+        <h2>伝説のイモを探せ！</h2>
+        <p>- ルール説明 -</p>
+        <p>
+          <i class="bi bi-caret-up-fill"></i>
+          <i class="bi bi-caret-right-fill"></i>
+          <i class="bi bi-caret-down-fill"></i>
+          <i class="bi bi-caret-left-fill"></i>
+          で移動
+        </p>
+        <ul>
+          <li><button id="btn_start">このイモをほる</button></li>
+          <li><button id="btn_next">別のイモにする</button></li>
+        </ul>
+      </div>
+      <div class="ground-img">
+        <div class="cat_c"> </div>
+        <div class="root_2"> </div>
+        <div class="root_0"> </div>
+      </div>
+    </section>
+
+    <!-- ■ 地下 ■ -->
+    <section id="underground" class="hide dot-ja">
+      <!-- <h2>探索中…</h2> -->
+      <!-- ■ 地下世界 ■ -->
+      <div id="world">
+        <table>
+          <tr><td id="world_s"> </td><td id="world_t"> </td><td id="world_s"> </td></tr>
+          <tr><td id="world_l"> </td><td id="world_c"> </td><td id="world_r"> </td></tr>
+          <tr><td> </td><td id="world_b"> </td><td> </td></tr>
+        </table>
+      </div>
+      <!-- ■ いもねこ ■ -->
+      <div id="cat">
+        <div id="cat-move" class=""><div id="cat-run" class=""> </div></div>
+      </div>
+      <!-- ■ ボタン ■ -->
+      <div class="btn_nav">
+        <button id="btn_t"><i class="bi bi-caret-up-fill"></i></button>
+        <button id="btn_r"><i class="bi bi-caret-right-fill"></i></button>
+        <button id="btn_b"><i class="bi bi-caret-down-fill"></i></button>
+        <button id="btn_l"><i class="bi bi-caret-left-fill"></i></button>
+      </div>
+      <!-- ■ 発見済みのイモ ■ -->
+      <div class="menu rpg-msg">
+        <p>イモ：<span> </span></p>
+        <ul>
+          <li><button id="btn_map">マップをひらく</button> </li>
+          <li><button id="btn_exit">リタイア</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ■ マップ ■ -->
+    <section id="map" class="hide dot-ja rpg-msg">
+      <div class="scroll">
+        <table> </table>
+        <dl>
+          <dt class="root_cat">....</dt><dd>現在位置</dd>
+          <dt class="root_0">....</dt><dd>ほってない土</dd>
+          <dt class="root_1">....</dt><dd>ほった土</dd>
+          <dt class="root_9">....</dt><dd>イモ</dd>
+          <dt class="root_7">....</dt><dd>？？？</dd>
+          <dt class="root_8 hide">....</dt><dd class="hide">伝説のイモ</dd>
+        </dl>
+      </div>
+    </section>
+    
+    <!-- ■ イモ発見 ■ -->
+    <section id="imo" class="hide dot-ja rpg-msg">
+      <div class="scroll">
+        <p class="dot-en">! GOOD JOB !</p>
+        <h2>イモを発見したよ</h2>
+        <p>やったね</p>
+        <div id="imo-img" class="root_9"> </div>
+        <p class="dot-en"><span>○</span> ／ <span>○</span> imo</p>
+      </div>
+    </section>
+
+    <!-- ■ モーダルマスク ■ -->
+    <section id="mask" class="hide"> </section>
+
+  </main>
+
+  <footer class="container">
+    <!-- ■ sns ■ -->
+    <section id="sns-share">
+      <!-- twitter シェアボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="en" 
+      data-text="【伝説のイモを探せ！】ここほれ！にゃんこ！【いもねこアプリ】" 
+      data-url="https://izako0617.github.io/webapp/imohori/" 
+      data-hashtags="いもねこアプリ,ねこ,cat,webアプリ" 
+      data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- いいねボタン -->
+      <span mv-app="love" mv-mode="edit" mv-bar="hide" mv-storage="https://github.com/izako0617/data/" mv-autosave>
+        <button property="imohori" mv-clicked><i class="bi bi-suit-heart"></i></button> [imohori]
+      </span>
+    </section>
+    <p class="ad">
+      ----- AD -----<br><br>
+      伝説のイモを探して遊べるのは いもねこアプリだけ！
+    </p>
+    <p class="imoapp"><a href="../index.html">いもねこアプリ</a></p>
+
+  </footer>
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>
